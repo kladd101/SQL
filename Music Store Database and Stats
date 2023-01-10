@@ -1,0 +1,33 @@
+--Create a Store Database
+
+CREATE TABLE musicstore (id integer primary key, instrument TEXT, price integer, color text, condition text);
+
+-- These are the values inserted intot the table
+INSERT INTO musicstore VALUES (1, "bass", 699, "red", "new");
+INSERT INTO musicstore VALUES (2, "guitar", 1000, "blue", "new");
+INSERT INTO musicstore VALUES (3, "drums", 1999, "grey", "new");
+INSERT INTO musicstore VALUES (4, "bass", 1200, "black", "used");
+INSERT INTO musicstore VALUES (5, "piano", 6999, "black", "new");
+INSERT INTO musicstore VALUES (6, "bass", 500, "green", "used");
+INSERT INTO musicstore VALUES (7, "bass", 900, "purple", "new");
+INSERT INTO musicstore VALUES (8, "bass", 1500, "red", "new");
+INSERT INTO musicstore VALUES (9, "guitar", 750, "yello", "new");
+INSERT INTO musicstore VALUES (10, "bass", 699, "grey", "new");
+INSERT INTO musicstore VALUES (11, "bass", 699, "white", "new");
+INSERT INTO musicstore VALUES (12, "guitar", 850, "red", "new");
+INSERT INTO musicstore VALUES (13, "bass", 699, "orange", "new");
+INSERT INTO musicstore VALUES (14, "drums", 1100, "clear", "used");
+INSERT INTO musicstore VALUES (15, "bass", 699, "red", "new");
+
+--Displays entire table
+select * from musicstore;
+
+--Orders table by price asc
+select * from musicstore order by price asc;
+
+--Adds up the total price of instruments that cost over $1000
+select sum(price) from musicstore where price>1000;  
+
+-- Finds the average price of the basses 
+select avg(price) from musicstore where instrument = "bass";
+
