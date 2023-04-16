@@ -1,0 +1,21 @@
+--Create a Book List
+
+CREATE TABLE booklist (id integer primary key, name TEXT, rating integer);
+
+
+INSERT INTO booklist values(1, "Blink", 10);
+INSERT INTO booklist values(2, "Lifeofpi", 9);
+INSERT INTO booklist values(3, "TuesdayswithMorrie", 10);
+INSERT INTO booklist values(4, "Tippingpoint", 8);
+INSERT INTO booklist values(5, "TheAlchemist", 10);
+
+Select * from booklist;
+
+select name from booklist order by name
+;
+
+select ID from booklist order by rating desc;
+
+select name from booklist where rating = 8;
+
+select name from booklist where rating >= 9; 
