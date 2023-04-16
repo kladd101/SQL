@@ -19,3 +19,14 @@ select ID from booklist order by rating desc;
 select name from booklist where rating = 8;
 
 select name from booklist where rating >= 9; 
+
+select * from booklist where name like 't%';
+
+select * from booklist where name like '%t' ;
+
+select * from booklist where name like '%n%';
+
+
+select name AS TITLE from booklist where name between 'Blink' and 'Lifeofpi';
+
+select id AS GodNumber from booklist where id between 2 and 4;
