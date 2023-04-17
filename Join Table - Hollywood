@@ -1,0 +1,33 @@
+--JOIN, Mutliple tables, Stars
+
+Create Table STARS (id integer primary key autoincrement, name TEXT, email TEXT, Age integer);
+
+Insert into STARS(name, email, age) Values("DanielDayLewis", "DDL@yahoo.com", 65);
+Insert into STARS(name, email, age) Values("DenzelWashington", "DW@yahoo.com", 68);
+Insert into STARS(name, email, age) Values("MerylStreep", "MS@yahoo.com", 73);
+Insert into STARS(name, email, age) Values("JudyDench", "JD@yahoo.com", 88);
+
+select * from STARS;
+
+Create Table Career (id integer primary key autoincrement, name TEXT, movie TEXT, earnings TEXT, star_ID integer);
+
+Insert into Career (name, movie, earnings, star_ID) Values("DanielDayLewis","Lincoln", 10000000, 1);
+Insert into Career (name, movie, earnings, star_ID) Values("DenzelWashington","TrainingDay", 12000000, 2);
+Insert into Career (name, movie, earnings, star_ID) Values("MerylStreep","TheIronLady", 1000000, 3);
+Insert into Career (name, movie, earnings, star_ID) Values("DanielDayLewis","MyLeftFoot", 7000000, 1);
+Insert into Career (name, movie, earnings, star_ID) Values("MerylStreep","TheDevilWearsPrada", 20000000, 3);
+select * from career;
+
+--Join one table to show name and email
+
+select STARS.name, movie, earnings 
+from STARS
+Left Join Career
+On STARS.id= Career.Star_ID;
+
+-- This left join will show the names and average salaries of the actors listed in the tables. It will also show a NULL value for Judy Dench as she does not have any info in the Career table.  
+Select stars.name, avg(earnings)
+FROM STARS
+Left JOIN Career
+ON STARS.ID = Career.Star_ID
+Group By stars.name;
