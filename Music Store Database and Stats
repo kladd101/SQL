@@ -31,3 +31,21 @@ select sum(price) from musicstore where price>1000;
 -- Finds the average price of the basses 
 select avg(price) from musicstore where instrument = "bass";
 
+-- Lists all basses with price and color
+select instrument, price, color from musicstore where instrument = 'bass';
+
+--Lists all instruments and orders them alphabetically by color
+select instrument, color from musicstore order by color;
+
+-- Lists all instruments that have a color that starts with the letter b
+select instrument,color from musicstore where color like 'b%';
+
+--Lists all instruments that have a color with the letter e, orders it in reverse alphabetical 
+select instrument,color from musicstore where color like '%e%' order by color desc;
+
+--Lists the number of instruments where the price is greater than 2000
+select count(instrument) from musicstore where price >2000;
+
+--Lists the number of each type of instrument and names the count ans AMT_INSt
+select count(instrument) as AMT_INST, instrument from musicstore group by instrument;
+
