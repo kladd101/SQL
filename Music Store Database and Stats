@@ -11,7 +11,7 @@ INSERT INTO musicstore VALUES (5, "piano", 6999, "black", "new");
 INSERT INTO musicstore VALUES (6, "bass", 500, "green", "used");
 INSERT INTO musicstore VALUES (7, "bass", 900, "purple", "new");
 INSERT INTO musicstore VALUES (8, "bass", 1500, "red", "new");
-INSERT INTO musicstore VALUES (9, "guitar", 750, "yello", "new");
+INSERT INTO musicstore VALUES (9, "guitar", 750, "yellow", "new");
 INSERT INTO musicstore VALUES (10, "bass", 699, "grey", "new");
 INSERT INTO musicstore VALUES (11, "bass", 699, "white", "new");
 INSERT INTO musicstore VALUES (12, "guitar", 850, "red", "new");
